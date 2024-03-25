@@ -66,13 +66,13 @@ void loop() {
       hedefModu = false;
     } else if (komut.startsWith("h")) {
       int yeniHedef = komut.substring(1).toInt();
-      if (yeniHedef >= 30 && yeniHedef <= 1010) {
+      if (yeniHedef >= 20 && yeniHedef <= 1018) {
         hedefPotansDegeri = yeniHedef;
         Serial.print("Hedef potansiyometre degeri belirlendi: ");
         Serial.println(hedefPotansDegeri);
         hedefModu = true;
       } else {
-        Serial.println("Hata: Hedef deger 35 ile 975 arasinda olmalidir.");
+        Serial.println("Hata: Hedef deger 20 ile 1018 arasinda olmalidir.");
       }
 
     }
