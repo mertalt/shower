@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <math.h>
+#include <max6675.h>
 
 // Pin tanımlamaları
 const int motorIleriPWM = 3; // PWM destekleyen motor ileri dönüş pini
@@ -10,6 +11,9 @@ int hedefPotansDegeri = 0;   // Hedef potansiyometre değeri
 const int motorEnable = 2;   // Motor enable pini
 const int actionPin = 37;
 bool hedefModu = false;      // Hedef modunu kontrol et
+int thermoDO = 50;
+int thermoCS = 51;
+int thermoCLK = 52;
 
 // PID Kontrol Değişkenleri
 float Kp = 18; // Oransal katsayı
